@@ -1,0 +1,406 @@
+/* =========================
+   OUR FARM SECTION
+========================= */
+
+.about-section {
+    padding: 100px 0;
+    background: #fffaf0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* Farm Image */
+
+.farm-photo {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #ead8c0;
+    box-shadow: 0 25px 60px rgba(75, 36, 21, 0.18);
+}
+
+.farm-photo img {
+    width: 100%;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.farm-photo:hover img {
+    transform: scale(1.05);
+}
+
+/* Image overlay */
+
+.farm-photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(55, 25, 12, 0.45),
+        transparent 45%
+    );
+    pointer-events: none;
+}
+
+/* Image badge */
+
+.photo-badge {
+    position: absolute;
+    left: 22px;
+    bottom: 22px;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 18px;
+
+    background: rgba(255, 250, 240, 0.95);
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.photo-badge span {
+    font-size: 28px;
+}
+
+.photo-badge strong {
+    display: block;
+    color: #713b20;
+    font-size: 15px;
+}
+
+.photo-badge small {
+    display: block;
+    color: #8b705c;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+/* Text */
+
+.about-content .eyebrow {
+    margin-bottom: 12px;
+}
+
+.about-content h2 {
+    font-family: "Yatra One", serif;
+    color: #4b2415;
+    font-size: clamp(35px, 4vw, 50px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.about-content h2 span {
+    color: #d18a49;
+}
+
+.about-content p {
+    color: #654e3d;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    max-width: 550px;
+}
+
+/* Statistics */
+
+.farm-stats {
+    display: flex;
+    gap: 45px;
+    margin: 30px 0;
+}
+
+.farm-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.farm-stats strong {
+    font-family: "Yatra One", serif;
+    color: #713b20;
+    font-size: 28px;
+    line-height: 1;
+}
+
+.farm-stats span {
+    color: #8b705c;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 6px;
+}
+
+/* Mobile */
+
+@media (max-width: 800px) {
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .farm-photo img {
+        height: 380px;
+    }
+
+    .about-content h2 {
+        font-size: 38px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .about-section {
+        padding: 70px 0;
+    }
+
+    .farm-photo img {
+        height: 300px;
+    }
+
+    .photo-badge {
+        left: 12px;
+        bottom: 12px;
+        padding: 10px 13px;
+    }
+
+    .farm-stats {
+        gap: 25px;
+    }
+
+}
+/* =========================
+   PRODUCTS
+========================= */
+
+.products-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2 {
+    font-family: "Yatra One", serif;
+    color: #4b2415;
+    font-size: 45px;
+    margin: 10px 0 15px;
+}
+
+.section-heading p {
+    color: #705847;
+    line-height: 1.7;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.product-card {
+    background: #fffaf0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(75, 36, 21, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 55px rgba(75, 36, 21, 0.18);
+}
+
+.product-image {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 28px;
+}
+
+.product-tag {
+    color: #c87835;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.product-info h3 {
+    color: #4b2415;
+    font-family: "Yatra One", serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.product-info p {
+    color: #705847;
+    line-height: 1.7;
+}
+
+.product-bottom {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.product-bottom strong {
+    color: #713b20;
+    font-size: 20px;
+}
+
+@media (max-width: 700px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 320px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .product-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+    }
+}
+/* =========================
+   LOCATION
+========================= */
+
+.location-section {
+    padding: 100px 0;
+    background: #fffaf0;
+}
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.location-content h2 {
+    font-family: "Yatra One", serif;
+    color: #4b2415;
+    font-size: 45px;
+    line-height: 1.2;
+    margin: 15px 0 20px;
+}
+
+.location-content h2 span {
+    color: #d18a49;
+}
+
+.location-content > p {
+    color: #705847;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+.address-box {
+    margin: 30px 0;
+    padding: 22px;
+    background: #f7efe2;
+    border-left: 4px solid #d18a49;
+    border-radius: 8px;
+}
+
+.address-box strong {
+    color: #713b20;
+}
+
+.address-box p {
+    color: #705847;
+    line-height: 1.7;
+    margin: 8px 0 0;
+}
+
+.map-box {
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(75, 36, 21, 0.15);
+}
+
+@media (max-width: 800px) {
+
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .location-content h2 {
+        font-size: 36px;
+    }
+}
+/* Ghee Prices */
+
+.ghee-prices {
+    display: flex;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.ghee-price {
+    flex: 1;
+    padding: 15px;
+    background: #f7efe2;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ead8c0;
+}
+
+.ghee-price span {
+    display: block;
+    color: #705847;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.ghee-price strong {
+    color: #713b20;
+    font-size: 22px;
+}
+
+@media (max-width: 500px) {
+    .ghee-prices {
+        flex-direction: column;
+    }
+}
